@@ -24,32 +24,27 @@
             {{/if}}
         </nav>
     </header>
-    <h1>Your Posts:</h1>
+
     <main class="container">
             <div class="row mb-1">
-              <a href="/dashboard/create/"><button id="create-post" class="btn">create post</button></a>
-            <div class="card post d-flex">
-                <div class="card-body post-body">
-                  <h4 class="card-title post-title">Card title <a href="/dashboard/edit/{{post.id}}"><button class="btn">edit post</button></a></h4>
-                  
-                  <p class="card-text post-text">
-                    Some quick example text to build on the card title
-                    and make up the bulk of the card's content.
-                    Some quick example text to build on the card title
-                    and make up the bulk of the card's content.
-                    Some quick example text to build on the card title
-                    and make up the bulk of the card's content.
-                    Some quick example text to build on the card title
-                    and make up the bulk of the card's content.
-                    Some quick example text to build on the card title
-                    and make up the bulk of the card's content.
-                  </p>
-                  <a href="#!" class="btn btn-primary post-button">View Post</a>
-                  <p class="post-date">Posted On: 06/04/2020 by <span class="post-username">dylankaz</span></p>
-                </div>
+                <a href="/dashboard" class=""> &larr; Dashboard</a>
+                <h1>Edit Post</h1>
+                <form class="edit-post-form">
+                    <div class="mb-3">
+                       <label for="post-title" class="form-label">Post Title:</label>
+                       <input type="text" name="post-title" id="email-signup" class="form-control input" value="{{post.title}}"/>
+                     </div>
+                     <div class="mb-3">
+                       <label for="post-content" class="form-label">Content</label>
+                       <input class="textarea form-control" name="post-content" type="text" value="{{post.post_content}}" />
+                     </div>
+                     <div class="mb-3">
+                       <button type="submit" class="btn is-success">Save</button>
+                       <button type="button" class="btn is-danger delete-post-btn">Delete</button>
+                     </div>
+                   </form>
             </div>
-            </div>
-     </main>
+    </main>
 
 <footer class="footer rows footer-margin">
         <div class="row-is-full content has-text-centered">
@@ -67,7 +62,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<script src="js/logout.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
 </body>
 
 </html>
